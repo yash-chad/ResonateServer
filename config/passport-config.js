@@ -20,7 +20,8 @@ passport.use(
       // options for google strategy
       clientID: process.env.clientID,
       clientSecret: process.env.clientSecret,
-      callbackURL: "/api/auth/google/redirect",
+      callbackURL:
+        "https://ancient-mountain-80140.herokuapp.com/api/auth/google/redirect",
     },
     (accessToken, refreshToken, profile, done) => {
       // check if user already exists in our own db

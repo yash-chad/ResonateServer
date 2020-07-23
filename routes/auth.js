@@ -10,7 +10,9 @@ const passport = require("passport");
 // auth logout
 router.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("http://localhost:3000/");
+  res.redirect(
+    "https://5f1934710500490991134318--elegant-shockley-13039d.netlify.app/"
+  );
 });
 
 // auth with google+
@@ -26,7 +28,9 @@ router.get(
 router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
   console.log("IN the redirect pps");
   // res.send(req.user);
-  res.redirect("http://localhost:3000/profile");
+  res.redirect(
+    "https://5f1934710500490991134318--elegant-shockley-13039d.netlify.app/profile"
+  );
 });
 
 module.exports = router;
